@@ -23,6 +23,7 @@ main {
     grid-gap: 40px;
 
     .card {
+      display: grid;
       background-color: #39393b;
       grid-column-end: span 3;
       cursor: pointer;
@@ -34,21 +35,21 @@ main {
 
       .card_img-container {
         width: 100%;
-
+margin: 0 auto;
         img {
           width: 100%;
         }
       }
     }
 
-    @media only screen and (max-width:1300px) {
+    @media screen and (max-width:1300px) {
       .card {
         grid-column-end: span 4;
 
       }
     }
 
-    @media only screen and (max-width:800px) {
+    @media screen and (max-width:800px) {
       .cards {
         grid-gap: 20px;
       }
@@ -59,11 +60,11 @@ main {
     }
 
   }
-  @media only screen and (max-width:500px) {
-    main {
+  @media screen and (max-width:500px) {
+
       grid-template-columns: 10px repeat(6, 1fr) 10px;
       grid-gap: 10px;
-    }
+
 
     .cards {
       grid-template-columns: repeat(6, 1fr);
@@ -72,6 +73,7 @@ main {
     }
 
     .card {
+      
       grid-column-end: span 6;
 
     }
