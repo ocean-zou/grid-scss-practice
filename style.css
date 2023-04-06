@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(32, 32, 32);
+}
+
+main {
+  display: grid;
+  padding: 40px 0;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+  grid-gap: 40px;
+}
+main .cards {
+  grid-template-columns: repeat(12, minmax(auto, 60px));
+  grid-column: 2/span 12;
+  display: grid;
+  grid-gap: 40px;
+}
+main .cards .card {
+  background-color: #39393b;
+  grid-column-end: span 3;
+  cursor: pointer;
+  transition: all 0.3s ease 0;
+}
+main .cards .card:hover {
+  transform: translateY(-8px);
+}
+main .cards .card .card_img-container {
+  width: 100%;
+}
+main .cards .card .card_img-container img {
+  width: 100%;
+}
+@media only screen and (max-width: 1300px) {
+  main .cards .card {
+    grid-column-end: span 4;
+  }
+}
+@media only screen and (max-width: 800px) {
+  main .cards .cards {
+    grid-gap: 20px;
+  }
+  main .cards .card {
+    grid-column-end: span 6;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main main {
+    grid-template-columns: 10px repeat(6, 1fr) 10px;
+    grid-gap: 10px;
+  }
+  main .cards {
+    grid-template-columns: repeat(6, 1fr);
+    grid-column: 2/span 6;
+    grid-gap: 10px;
+  }
+  main .card {
+    grid-column-end: span 6;
+  }
+}/*# sourceMappingURL=style.css.map */
